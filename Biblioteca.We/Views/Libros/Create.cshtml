@@ -1,0 +1,48 @@
+﻿@model Libro
+@{
+    ViewData["Title"] = "Nuevo libro";
+}
+
+<h1>Nuevo libro</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Titulo" class="form-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ISBN" class="form-label"></label>
+                <input asp-for="ISBN" class="form-control" placeholder="978-0-00-000000-0" />
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="AutorId" class="form-label"></label>
+                <select asp-for="AutorId" asp-items="@(ViewData["Autores"] as SelectList)" class="form-select">
+                    <option value="0">-- Seleccione un autor --</option>
+                </select>
+                <span asp-validation-for="AutorId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Ejemplares" class="form-label"></label>
+                <input asp-for="Ejemplares" class="form-control" min="0" max="1000" />
+                <span asp-validation-for="Ejemplares" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

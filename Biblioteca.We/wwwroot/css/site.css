@@ -1,0 +1,393 @@
+/* =========================================================
+   Biblioteca - Tema morado pastel
+   ========================================================= */
+:root {
+    --morado-50: #F7F3FE;
+    --morado-100: #EDE5FB;
+    --morado-200: #D9CAF5;
+    --morado-300: #B9A1EA;
+    --morado-400: #9C7EDF;
+    --morado-500: #7B5FD1;
+    --morado-700: #4E2FB0;
+    --texto: #2E2545;
+    --texto-suave: #6E6789;
+    --rosa: #F4A7B9;
+    --verde: #9EDDBE;
+    --amarillo: #F8DFA6;
+    --sombra: 0 10px 30px rgba(123, 95, 209, 0.12);
+}
+
+html {
+    font-size: 15px;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+    background: linear-gradient(180deg, var(--morado-50) 0%, #FFFFFF 70%);
+    margin-bottom: 80px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-biblio {
+    background: linear-gradient(90deg, var(--morado-500), var(--morado-300));
+    box-shadow: 0 4px 20px rgba(123, 95, 209, 0.25);
+    padding: 0.8rem 0;
+}
+
+    .navbar-biblio .navbar-brand {
+        font-weight: 700;
+        font-size: 1.35rem;
+        color: #fff;
+        letter-spacing: 0.3px;
+    }
+
+    .navbar-biblio .nav-link {
+        color: rgba(255, 255, 255, 0.88);
+        font-weight: 500;
+        border-radius: 999px;
+        padding: 0.45rem 1.1rem !important;
+        margin: 0 0.15rem;
+        transition: all 0.2s ease;
+    }
+
+        .navbar-biblio .nav-link:hover,
+        .navbar-biblio .nav-link.active {
+            background: rgba(255, 255, 255, 0.22);
+            color: #fff;
+        }
+
+/* ---------- Tarjeta principal ---------- */
+.contenido-card {
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid var(--morado-100);
+    box-shadow: var(--sombra);
+    padding: 2rem 2.2rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--morado-700);
+}
+
+h2, h3, h4, h5 {
+    color: var(--morado-700);
+    font-weight: 600;
+}
+
+hr {
+    border-color: var(--morado-200);
+    opacity: 1;
+}
+
+.text-muted {
+    color: var(--texto-suave) !important;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+    border-radius: 999px;
+    font-weight: 500;
+    padding: 0.5rem 1.3rem;
+    transition: all 0.2s ease;
+}
+
+.btn-sm {
+    padding: 0.3rem 0.85rem;
+    font-size: 0.82rem;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--morado-500);
+    border-color: var(--morado-500);
+    box-shadow: 0 4px 12px rgba(123, 95, 209, 0.3);
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background: var(--morado-700);
+        border-color: var(--morado-700);
+    }
+
+.btn-outline-primary {
+    color: var(--morado-500);
+    border-color: var(--morado-300);
+}
+
+    .btn-outline-primary:hover {
+        background: var(--morado-500);
+        border-color: var(--morado-500);
+        color: #fff;
+    }
+
+.btn-secondary,
+.btn-outline-secondary {
+    background: var(--morado-100);
+    border-color: var(--morado-100);
+    color: var(--morado-700);
+}
+
+    .btn-secondary:hover,
+    .btn-outline-secondary:hover {
+        background: var(--morado-200);
+        border-color: var(--morado-200);
+        color: var(--morado-700);
+    }
+
+.btn-warning {
+    background: var(--amarillo);
+    border-color: var(--amarillo);
+    color: #6B4E00;
+}
+
+    .btn-warning:hover {
+        background: #F3CF7E;
+        border-color: #F3CF7E;
+        color: #6B4E00;
+    }
+
+.btn-danger {
+    background: var(--rosa);
+    border-color: var(--rosa);
+    color: #7A1F35;
+}
+
+    .btn-danger:hover {
+        background: #EE8AA2;
+        border-color: #EE8AA2;
+        color: #7A1F35;
+    }
+
+.btn-outline-info {
+    color: var(--morado-500);
+    border-color: var(--morado-200);
+}
+
+    .btn-outline-info:hover {
+        background: var(--morado-100);
+        border-color: var(--morado-300);
+        color: var(--morado-700);
+    }
+
+.btn-outline-warning {
+    color: #9A6B00;
+    border-color: var(--amarillo);
+}
+
+    .btn-outline-warning:hover {
+        background: var(--amarillo);
+        border-color: var(--amarillo);
+        color: #6B4E00;
+    }
+
+.btn-outline-danger {
+    color: #C2435F;
+    border-color: var(--rosa);
+}
+
+    .btn-outline-danger:hover {
+        background: var(--rosa);
+        border-color: var(--rosa);
+        color: #7A1F35;
+    }
+
+/* ---------- Tablas ---------- */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--morado-100);
+    border-radius: 16px;
+    overflow: hidden;
+    --bs-table-striped-bg: var(--morado-50);
+    --bs-table-hover-bg: var(--morado-100);
+}
+
+.table-dark {
+    --bs-table-bg: var(--morado-200);
+    --bs-table-color: var(--morado-700);
+    --bs-table-border-color: var(--morado-200);
+}
+
+.table thead th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.9rem 0.8rem;
+    border: none;
+}
+
+.table td {
+    padding: 0.8rem;
+    border-color: var(--morado-100);
+}
+
+/* ---------- Formularios ---------- */
+.form-label {
+    font-weight: 600;
+    color: var(--morado-700);
+    margin-bottom: 0.35rem;
+}
+
+.form-control,
+.form-select {
+    border-radius: 12px;
+    border: 1.5px solid var(--morado-200);
+    padding: 0.6rem 0.95rem;
+    transition: all 0.2s ease;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--morado-400);
+        box-shadow: 0 0 0 0.22rem rgba(156, 126, 223, 0.25);
+    }
+
+.text-danger,
+.field-validation-error {
+    color: #D04A68 !important;
+    font-size: 0.85rem;
+}
+
+.input-validation-error {
+    border-color: var(--rosa) !important;
+}
+
+/* ---------- Alertas y badges ---------- */
+.alert {
+    border-radius: 14px;
+    border: none;
+}
+
+.alert-success {
+    background: #E3F6EC;
+    color: #1F6B47;
+}
+
+.alert-info {
+    background: var(--morado-100);
+    color: var(--morado-700);
+}
+
+.alert-warning {
+    background: #FFF4DA;
+    color: #7A5800;
+}
+
+.alert-danger {
+    background: #FDE6EC;
+    color: #9B2643;
+}
+
+.badge {
+    border-radius: 999px;
+    padding: 0.45em 0.9em;
+    font-weight: 500;
+}
+
+.bg-success {
+    background: var(--verde) !important;
+    color: #1F6B47 !important;
+}
+
+.bg-danger {
+    background: var(--rosa) !important;
+    color: #7A1F35 !important;
+}
+
+.bg-warning {
+    background: var(--amarillo) !important;
+}
+
+/* ---------- Detalle (dl) ---------- */
+dl.row dt {
+    color: var(--morado-500);
+    font-weight: 600;
+}
+
+dl.row dd {
+    margin-bottom: 0.8rem;
+}
+
+/* ---------- Cards del inicio ---------- */
+.card-menu {
+    border: 1px solid var(--morado-100);
+    border-radius: 20px;
+    padding: 1.8rem;
+    background: #fff;
+    box-shadow: var(--sombra);
+    height: 100%;
+    text-decoration: none;
+    color: var(--texto);
+    display: block;
+    transition: all 0.25s ease;
+}
+
+    .card-menu:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(123, 95, 209, 0.22);
+        color: var(--texto);
+    }
+
+    .card-menu .icono {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        background: var(--morado-100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-menu h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .card-menu p {
+        color: var(--texto-suave);
+        margin: 0;
+        font-size: 0.92rem;
+    }
+
+.hero {
+    background: linear-gradient(120deg, var(--morado-500), var(--morado-300));
+    border-radius: 24px;
+    padding: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 35px rgba(123, 95, 209, 0.3);
+}
+
+    .hero h1 {
+        color: #fff;
+        font-size: 2.1rem;
+    }
+
+    .hero p {
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+    }
+
+/* ---------- Footer ---------- */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 60px;
+    background: #fff;
+    border-top: 1px solid var(--morado-100) !important;
+    color: var(--texto-suave);
+    font-size: 0.88rem;
+}

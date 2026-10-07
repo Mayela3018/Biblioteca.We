@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="hero">
+    <h1>📚 Sistema de Biblioteca</h1>
+    <p>Gestiona libros, socios y préstamos desde un solo lugar.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <a asp-controller="Libros" asp-action="Index" class="card-menu">
+            <div class="icono">📖</div>
+            <h3>Libros</h3>
+            <p>Registra, busca, edita y elimina los libros del catálogo.</p>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a asp-controller="Socios" asp-action="Index" class="card-menu">
+            <div class="icono">👥</div>
+            <h3>Socios</h3>
+            <p>Consulta los socios activos y registra nuevos socios.</p>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a asp-controller="Prestamos" asp-action="Reporte" class="card-menu">
+            <div class="icono">📋</div>
+            <h3>Reporte de préstamos</h3>
+            <p>Filtra los préstamos por rango de fechas y revisa su estado.</p>
+        </a>
+    </div>
+</div>
