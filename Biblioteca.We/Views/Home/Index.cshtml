@@ -1,12 +1,38 @@
-﻿@{
+﻿@using System.Globalization
+@{
     ViewData["Title"] = "Inicio";
+
+    var ahora = DateTime.Now;
+    var fechaTexto = ahora.ToString("dddd, d 'de' MMMM 'de' yyyy", new CultureInfo("es-PE"));
+    fechaTexto = char.ToUpper(fechaTexto[0]) + fechaTexto.Substring(1);
+
+    var saludo = ahora.Hour < 12 ? "Buenos días" : ahora.Hour < 19 ? "Buenas tardes" : "Buenas noches";
 }
 
-<div class="hero">
-    <h1>📚 Sistema de Biblioteca</h1>
-    <p>Gestiona libros, socios y préstamos desde un solo lugar.</p>
-</div>
+<!-- ===================== SALUDO + ESTANTE ===================== -->
+<section class="hero-dashboard">
+    <div class="hero-texto">
+        <span class="hero-fecha">📅 @fechaTexto</span>
+        <h1>@saludo 👋</h1>
+        <p>Te damos la bienvenida al Sistema de Biblioteca. Gestiona libros, socios y préstamos desde un solo lugar.</p>
+        <div class="hero-botones">
+            <a asp-controller="Libros" asp-action="Create" class="btn btn-light-morado">+ Nuevo libro</a>
+            <a asp-controller="Socios" asp-action="Create" class="btn btn-borde-blanco">+ Nuevo socio</a>
+        </div>
+    </div>
 
+    <div class="estante d-none d-lg-flex" aria-hidden="true">
+        <div class="lomo l1"></div>
+        <div class="lomo l2"></div>
+        <div class="lomo l3"></div>
+        <div class="lomo l4"></div>
+        <div class="lomo l5"></div>
+        <div class="lomo l6"></div>
+        <div class="lomo l7"></div>
+    </div>
+</section>
+
+<!-- ===================== ACCESOS RÁPIDOS ===================== -->
 <div class="row g-4">
     <div class="col-md-4">
         <a asp-controller="Libros" asp-action="Index" class="card-menu">
